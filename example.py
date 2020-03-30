@@ -4,6 +4,7 @@ num = 1 #int
 num = 2 #int
 num = "Hello World" #string
 num = 100_000_000.0 #it`s right)
+bool = True
 
 snake_case = "111"
 
@@ -16,5 +17,7 @@ print(num)
 num = int(num)
 print(type(num))
 print(num)
+print(bool)
+print(13!=13)
 
 #Module @decimal, @fractions
