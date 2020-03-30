@@ -1,56 +1,46 @@
-example_string = "Python course on Coursera"
-print(example_string)
+#String Methods
+quote = """Болтовня ничего не стоит. Покажите мне код.
 
-print(type(example_string))
+Linus Torvalds
+"""
+print(quote.count("o"))
 
-example_string = "'Python course' on 'Coursera'"
-print(example_string)
+print("ukraine".capitalize())
 
-example_string = "\"Python\" course on \"Coursera\""
-print(example_string)
+print("2020".isdigit())
 
-#r-strings
-example_string = "A file on disk c:\\\\"
-print(example_string)
+#"in" operator
 
-example_string = r"A file on disk c:\\"
-print(example_string)
+print("3.14" in "Pi number = 3.1415926")
 
-#How to split long strings
+print("Oleh" in "Andriy")
 
-example_string = "Perl - is the language, which looks the same"\
-                 " as before and after RSA encoding"\
-                 "(c)Keith Bostic"
-print(example_string)
-
-example_string = """
-Є всього два типи мов програмування: ті,
- на які люди все одно сварться, та ті, які ніхто не використовує.
-
- Bjarne Strustrup
- """
-print(example_string)
-
-dot = '.'
-example_string = example_string + dot
-print(example_string)
-
-print(dot*3)
-
-#Strings can`t be chanched
+#"for in"
 example_string = "Hi"
-print(id(example_string))
-example_string = "Oh hi, Mark!"
-print(id(example_string))
-#output:
-#139828251348696
-#139828226371632
-#The 2 different Strings
+for letter in example_string:
+    print("Letter", letter)
 
-example_string = "Python course on Coursera"
-print(example_string[9:])#start
-print(example_string[9:15])#start:stop
-print(example_string[-9:])#start
-print(example_string[::2])#start:stop:step
-#invert string
-print(example_string[::-1])
+str = bool("asdad")
+print(str)
+
+#Strings formating
+template = "%s - головна перевага програміста. (%s)(%d)" % ("Лінь", "Larry Wall",190)
+print(template)
+
+print("{} не брешуть, але {} користуються формулами. ({})".format("Цифри", "Брехуни", "Robert A.Heinlein"))
+print("{num} не брешуть, але {people} користуються формулами. ({author})".format(num="Цифри", people="Брехуни", author="Robert A.Heinlein"))
+
+#f-strings Python3.6
+
+subject = "optimization"
+author = "Donald Knuth"
+
+print(f"Передчасна {subject} - корінь всіх бід. ({author})")
+
+num = 8
+print(f"Binary: {num:#b}")
+
+num = 2/3
+print(num)
+
+print(f"{num:.3f}")
